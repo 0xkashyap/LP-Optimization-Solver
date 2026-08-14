@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@import "@xyflow/react/dist/style.css";
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fafafa;
+  color: #171717;
+}
+
+/* Faint dotted grid sheet style */
+.dotted-bg {
+  background-image: radial-gradient(#e2e8f0 1.2px, transparent 1.2px);
+  background-size: 18px 18px;
+}
+
+/* React Flow Canvas tweaks */
+.react-flow__background {
+  background-color: #fafafa;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2.5;
+  transition: stroke 0.2s, stroke-width 0.2s;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #4f46e5;
+  stroke-width: 3;
+}
+
+/* Custom Scrollbar for results and node lists */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Standardize custom React Flow Controls SVGs to match default controls exactly */
+.react-flow__controls button svg.custom-control-icon {
+  width: 13px !important;
+  height: 13px !important;
+  fill: none !important;
+  stroke: #1a192b !important; /* React Flow default dark charcoal color */
+  stroke-width: 2.2 !important;  /* Match React Flow line weight */
+  display: block;
+  margin: 0 auto;
+  transition: stroke 0.15s;
+}
+
+/* Hover state: matching default React Flow icon hover state */
+.react-flow__controls button:hover svg.custom-control-icon {
+  stroke: #000000 !important;
+}
+
+/* Active (Locked) State style overrides */
+.react-flow__controls button.is-active svg.custom-control-icon {
+  stroke: #ef4444 !important; /* red-500 when active */
+}
+.react-flow__controls button.is-active:hover svg.custom-control-icon {
+  stroke: #b91c1c !important; /* dark red-700 on hover */
+}
+
+
