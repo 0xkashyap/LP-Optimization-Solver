@@ -2,7 +2,7 @@
 
 A premium, interactive web application built to help Operations Research and Management Science students visually formulate, solve, and analyze transportation and transshipment optimization models directly in the browser.
 
-### [Click here](test.com) to try out the tool or scroll below to install it locally.
+### [Click here](https://lp-optimization-solver.netlify.app) to try out the tool or scroll below to install it locally.
 
 ## 🚀 Key Features
 
